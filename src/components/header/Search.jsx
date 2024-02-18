@@ -1,3 +1,5 @@
+import { SearchBox } from "../../constants/images";
+
 export default function Search() {
   return (
     <form action="#">
@@ -9,7 +11,7 @@ export default function Search() {
           required
         />
         <button type="submit">
-          <img src={Search} />
+          <img src={SearchBox} />
         </button>
       </div>
     </form>
