@@ -28,7 +28,6 @@ const useWeather = () => {
         state: true,
         message: "Fetching Weather Data ...",
       });
-      console.log(import.meta.env.VITE_WEATHER_API_KEY);
 
       const response = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${

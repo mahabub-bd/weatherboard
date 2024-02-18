@@ -2,8 +2,8 @@ import { Heart } from "../../constants/images";
 import { useWeather } from "../../hooks";
 
 export default function WeatherHeadline() {
-  const { weatherData } = useWeather();
-  console.log(weatherData);
+  const { weatherData, loading } = useWeather();
+  console.log(weatherData, loading);
   return (
     <div className="md:col-span-2">
       <div className="flex items-center justify-end space-x-6">
