@@ -1,35 +1,10 @@
-import {
-  CloudIcon,
-  HazeIcon,
-  MapIcon,
-  RainIcon,
-  SnowIcon,
-  SunnyIcon,
-  ThunderIcon,
-} from "../../constants/images";
+import { MapIcon } from "../../constants/images";
 import { useWeatherContext } from "../../hooks";
-import { getFormattedDate } from "../../utility/formattedDate";
+import { getFormattedDate, getWeatherIcon } from "../../utility";
 
 export default function WeatherHeadline() {
   const { weatherData } = useWeatherContext();
   const { temperature, location, time, climate } = weatherData;
-
-  function getWeatherIcon(climate) {
-    switch (climate) {
-      case "Rain":
-        return RainIcon;
-      case "Clouds":
-        return CloudIcon;
-      case "Snow":
-        return SnowIcon;
-      case "Haze":
-        return HazeIcon;
-      case "Sunny":
-        return SunnyIcon;
-      case "Thunder":
-        return ThunderIcon;
-    }
-  }
 
   return (
     <div>

@@ -1,10 +1,10 @@
-import { Heart } from "../../constants/images";
+import { HeartIcon } from "../../constants/images";
 
-export default function Favourite() {
+export default function Favourite({ onShow }) {
   return (
     <div className="p-2 hover:bg-black/30 cursor-pointer flex gap-2 items-center rounded-md transition-all">
-      <img src={Heart} alt="" />
-      <span>Favourite Locations</span>
+      <img src={HeartIcon} alt="" />
+      <span onClick={onShow}>Favourite Locations</span>
     </div>
   );
 }

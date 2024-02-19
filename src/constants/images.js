@@ -1,5 +1,6 @@
 import HazeIcon from "../assets/haze.svg";
-import Heart from "../assets/heart.svg";
+import RedHeartIcon from "../assets/heart-red.svg";
+import HeartIcon from "../assets/heart.svg";
 import CloudIcon from "../assets/icons/cloud.svg";
 import Humidity from "../assets/icons/humidity.svg";
 import SnowIcon from "../assets/icons/snow.svg";
@@ -16,11 +17,12 @@ import ThunderIcon from "../assets/thunder.svg";
 export {
   CloudIcon,
   HazeIcon,
-  Heart,
+  HeartIcon,
   Humidity,
   Logomain,
   MapIcon,
   RainIcon,
+  RedHeartIcon,
   SearchBox,
   SnowIcon,
   SunnyIcon,
