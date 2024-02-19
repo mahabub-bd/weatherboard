@@ -2,7 +2,7 @@ import { useWeatherContext } from "../../hooks";
 import { AddToFavourite, WeatherCondition, WeatherHeadline } from "../weather";
 
 export default function WeatherBoard() {
-  const { weatherData, loading } = useWeatherContext();
+  const { loading } = useWeatherContext();
 
   return (
     <div className="container">
@@ -13,8 +13,8 @@ export default function WeatherBoard() {
           ) : (
             <>
               <AddToFavourite />
-              <WeatherHeadline data={weatherData} />
-              <WeatherCondition data={weatherData} />
+              <WeatherHeadline />
+              <WeatherCondition />
             </>
           )}
         </div>
