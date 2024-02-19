@@ -1,17 +1,22 @@
-import { Heart } from "../../constants/images";
-import { useWeather } from "../../hooks";
+import { CloudIcon, MapIcon } from "../../constants/images";
+import { timeStamp } from "../../utility/timeStamp";
 
-export default function WeatherHeadline() {
-  const { weatherData, loading } = useWeather();
-  console.log(weatherData, loading);
+export default function WeatherHeadline({ data }) {
   return (
-    <div className="md:col-span-2">
-      <div className="flex items-center justify-end space-x-6">
-        <button className="text-sm md:text-base inline-flex items-center space-x-2 px-3 py-1.5 rounded-md bg-[#C5C5C54D]">
-          <span>Add to Favourite</span>
-          <img src={Heart} alt="" />
-        </button>
+    <div>
+      <div className="max-md:flex items-center justify-between md:-mt-10">
+        <img src={CloudIcon} alt="cloud" />
+        <div className="max-md:flex items-center max-md:space-x-4">
+          <h1 className="text-[60px] lg:text-[80px] xl:text-[100px] leading-none md:mb-4">
+            {`${data.temperature}°`}
+          </h1>
+          <div className="flex items-center space-x-4 md:mb-4">
+            <img src={MapIcon} />
+            <h2 className="text-2xl lg:text-[50px]">{data.location}</h2>
+          </div>
+        </div>
       </div>
+      <p className="text-sm lg:text-lg">{timeStamp(`${data.time}`)}</p>
     </div>
   );
 }

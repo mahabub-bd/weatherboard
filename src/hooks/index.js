@@ -1,3 +1,5 @@
-import { useWeather } from "./useWeather";
+import useWeather from "./useWeather";
 
-export { useWeather };
+import useWeatherContext from "./useWeatherContext";
+
+export { useWeather, useWeatherContext };

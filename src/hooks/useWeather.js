@@ -86,4 +86,4 @@ const useWeather = () => {
   };
 };
 
-export { useWeather };
+export default useWeather;

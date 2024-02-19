@@ -1,21 +1,48 @@
-import { CloudIcon, MapIcon } from "../../constants/images";
+import { Humidity, TempMax, TempMin, WindIcon } from "../../constants/images";
 
-export default function WeatherCondtion() {
+export default function WeatherHeadCondition({ data }) {
   return (
     <div>
-      <div className="max-md:flex items-center justify-between md:-mt-10">
-        <img src={CloudIcon} alt="cloud" />
-        <div className="max-md:flex items-center max-md:space-x-4">
-          <h1 className="text-[60px] lg:text-[80px] xl:text-[100px] leading-none md:mb-4">
-            16°
-          </h1>
-          <div className="flex items-center space-x-4 md:mb-4">
-            <img src={MapIcon} />
-            <h2 className="text-2xl lg:text-[50px]">Dhaka</h2>
+      <p className="text-sm lg:text-lg font-bold uppercase mb-8">
+        {data.climate}
+      </p>
+      <ul className="space-y-6 lg:space-y-6">
+        <li className="text-sm lg:text-lg flex items-center justify-between space-x-4">
+          <span>Temp max</span>
+          <div className="inline-flex space-x-4">
+            <p>{`${data.maxTemperature} °`}</p>
+            <img src={TempMax} alt="temp-max" />
           </div>
-        </div>
-      </div>
-      <p className="text-sm lg:text-lg">06:09 - Sunday, 9 Dec ‘23</p>
+        </li>
+        <li className="text-sm lg:text-lg flex items-center justify-between space-x-4">
+          <span>Temp min</span>
+          <div className="inline-flex space-x-4">
+            <p>{`${data.minTemperature} °`}</p>
+            <img src={TempMin} alt="temp-min" />
+          </div>
+        </li>
+        <li className="text-sm lg:text-lg flex items-center justify-between space-x-4">
+          <span>Humadity</span>
+          <div className="inline-flex space-x-4">
+            <p> {`${data.humidity} %`}</p>
+            <img src={Humidity} alt="humidity" />
+          </div>
+        </li>
+        <li className="text-sm lg:text-lg flex items-center justify-between space-x-4">
+          <span>Cloudy</span>
+          <div className="inline-flex space-x-4">
+            <p> {`${data.cloudPercentage} %`}</p>
+            <img src={Humidity} alt="cloudy" />
+          </div>
+        </li>
+        <li className="text-sm lg:text-lg flex items-center justify-between space-x-4">
+          <span>Wind</span>
+          <div className="inline-flex space-x-4">
+            <p>{`${data.wind}km/h`}</p>
+            <img src={WindIcon} alt="wind" />
+          </div>
+        </li>
+      </ul>
     </div>
   );
 }
