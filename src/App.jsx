@@ -1,10 +1,17 @@
 import Page from "./Page";
-function App() {
+import {
+  FavouriteProvider,
+  LocationProvider,
+  WeatherProvider,
+} from "./provider";
+export default function App() {
   return (
-    <>
-      <Page />
-    </>
+    <LocationProvider>
+      <WeatherProvider>
+        <FavouriteProvider>
+          <Page />
+        </FavouriteProvider>
+      </WeatherProvider>
+    </LocationProvider>
   );
 }
-
-export default App;

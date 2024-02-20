@@ -14,7 +14,9 @@ export default function WeatherHeadCondition() {
 
   return (
     <div>
-      <p className="text-sm lg:text-lg font-bold uppercase mb-8">{climate}</p>
+      <p className="text-sm lg:text-lg font-bold uppercase mb-8">
+        The Climate is {climate}
+      </p>
       <ul className="space-y-6 lg:space-y-6">
         <li className="text-sm lg:text-lg flex items-center justify-between space-x-4">
           <span>Temp max</span>

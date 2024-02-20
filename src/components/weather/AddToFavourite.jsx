@@ -12,7 +12,6 @@ export default function AddToFavourite() {
 
   useEffect(() => {
     const found = favourites.find((fav) => fav.location === location);
-
     toggleFavourite(found);
   }, [favourites, location]);
 

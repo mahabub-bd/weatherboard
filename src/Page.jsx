@@ -1,12 +1,27 @@
+import { useEffect, useState } from "react";
 import { Header } from "./components";
 import { WeatherBoard } from "./components/weather";
-import { FavouriteProvider, WeatherProvider } from "./provider";
+import { useWeatherContext } from "./hooks";
+import { getBackgroundImage } from "./utility/getBackgroundImage";
 
 export default function Page() {
+  const [climateImage, setClimateImage] = useState("");
+  const { weatherData, loading } = useWeatherContext();
+  useEffect(() => {
+    const bgImage = getBackgroundImage(weatherData.climate);
+    setClimateImage(bgImage);
+  }, [weatherData.climate]);
   return (
-    <WeatherProvider>
-      <FavouriteProvider>
-        <div className="bg-body font-[Roboto] text-light bg-[url('../assets/body-bg.png')] bg-no-repeat bg-cover h-screen grid place-items-center">
+    <>
+      {loading.state ? (
+        <div className="flex bg-gray-200 mx-auto w-96  p-10 rounded-md mt-14">
+          <p className="text-center text-black text-3xl">{loading.message}</p>
+        </div>
+      ) : (
+        <div
+          style={{ backgroundImage: `url('${climateImage}')` }}
+          className="grid place-items-center h-screen bg-no-repeat bg-cover"
+        >
           <Header />
           <main>
             <section>
@@ -14,7 +29,7 @@ export default function Page() {
             </section>
           </main>
         </div>
-      </FavouriteProvider>
-    </WeatherProvider>
+      )}
+    </>
   );
 }

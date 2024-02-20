@@ -14,20 +14,37 @@ import RainIcon from "../assets/rainy.svg";
 import SearchBox from "../assets/search.svg";
 import ThunderIcon from "../assets/thunder.svg";
 
+import ClearSkyImage from "../assets/backgrounds/clear-sky.jpg";
+import FewCloudsImage from "../assets/backgrounds/few-clouds.jpg";
+import MistImage from "../assets/backgrounds/mist.jpeg";
+import RainyDayImage from "../assets/backgrounds/rainy-day.jpg";
+import ScatterdCloudImage from "../assets/backgrounds/scattered-clouds.jpg";
+import SnowImage from "../assets/backgrounds/snow.jpg";
+import ThunderStormImage from "../assets/backgrounds/thunderstorm.jpg";
+import WinterImage from "../assets/backgrounds/winter.jpg";
+
 export {
+  ClearSkyImage,
   CloudIcon,
+  FewCloudsImage,
   HazeIcon,
   HeartIcon,
   Humidity,
   Logomain,
   MapIcon,
+  MistImage,
   RainIcon,
+  RainyDayImage,
   RedHeartIcon,
+  ScatterdCloudImage,
   SearchBox,
   SnowIcon,
+  SnowImage,
   SunnyIcon,
   TempMax,
   TempMin,
   ThunderIcon,
+  ThunderStormImage,
   WindIcon,
+  WinterImage,
 };
