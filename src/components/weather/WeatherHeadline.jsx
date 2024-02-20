@@ -17,7 +17,7 @@ export default function WeatherHeadline() {
 
           <div className="flex items-center space-x-4 md:mb-4">
             <img src={MapIcon} />
-            <h2 className="text-2xl lg:text-[50px]">{location}</h2>
+            <h2 className="text-2xl lg:text-[40px] ">{location}</h2>
           </div>
         </div>
       </div>

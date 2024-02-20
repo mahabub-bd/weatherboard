@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Header } from "./components";
 import { WeatherBoard } from "./components/weather";
 import { useWeatherContext } from "./hooks";
-import { getBackgroundImage } from "./utility/getBackgroundImage";
+import { getBackgroundImage } from "./utility";
 
 export default function Page() {
   const [climateImage, setClimateImage] = useState("");
