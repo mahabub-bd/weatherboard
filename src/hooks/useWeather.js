@@ -17,8 +17,6 @@ const useWeather = () => {
     latitude: "",
   });
 
-  console.log(selectedLocation);
-
   const [loading, setLoading] = useState({
     state: false,
     message: "",
